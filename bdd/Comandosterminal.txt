@@ -1,1 +1,2 @@
+Instalar esto antes de la ejecucion del archivo de python
 pip install mysql-connector
