@@ -19,7 +19,7 @@ Se puede acceder a la wiki mediante el siguiente [enlace](https://github.com/INF
 ## Historias de usuarios 
 A continuación está el enlace a las [historias de usuario del proyecto](https://github.com/INF225-2023-2-P201/01-caturros/issues)
 
-##Ejecución de código
+## Ejecución de código
 Instalar esto antes de la ejecucion del archivo de python
 pip install mysql-connector
 python3 bdd/bdd.py
