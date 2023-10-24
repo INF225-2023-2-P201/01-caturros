@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2023 a las 23:49:27
+-- Tiempo de generación: 25-10-2023 a las 01:27:48
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -38,56 +38,21 @@ CREATE TABLE `intenciones` (
 --
 
 INSERT INTO `intenciones` (`id`, `intencion`, `cisco`) VALUES
-(1, 'saludar', NULL),
-(2, 'preguntar', NULL),
-(3, 'hacer', NULL),
-(4, 'jugar', NULL),
-(5, 'comer', NULL),
-(6, 'salir', NULL),
-(7, 'beber', NULL),
-(8, 'cocinar', NULL),
-(9, 'tomar', NULL),
-(10, 'limpiar', NULL),
-(11, 'asear', NULL),
-(12, 'programar', NULL),
-(13, 'lavar', NULL),
-(14, 'trabajar', NULL),
-(15, 'ser', NULL),
-(16, 'anular', NULL),
-(17, 'borrar', NULL),
-(18, 'estudiar', NULL),
-(19, 'facilitar', NULL),
-(20, 'acceder', NULL),
-(21, 'ceder', NULL),
-(22, 'prender', NULL),
-(23, 'proceder', NULL),
-(24, 'responder', NULL),
-(25, 'suspender', NULL),
-(26, 'añadir', NULL),
-(27, 'eliminar', NULL),
-(28, 'decidir', NULL),
-(29, 'omitir', NULL),
-(30, 'recibir', NULL),
-(31, 'contar', NULL),
-(32, 'encontrar', NULL),
-(33, 'pensar', NULL),
-(34, 'negar', NULL),
-(35, 'afirmar', NULL),
-(36, 'convencer', NULL),
-(37, 'volver', NULL),
-(38, 'construir', NULL),
-(39, 'atribuir', NULL),
-(40, 'coordinar', NULL),
-(41, 'liderar', NULL),
-(42, 'ejecutar', NULL),
-(43, 'evaluar', NULL),
-(44, 'crear', NULL),
-(45, 'aumentar', NULL),
-(46, 'disminuir', NULL),
-(47, 'conectar', NULL),
-(48, 'desconectar', NULL),
-(49, 'permitir', NULL),
-(50, 'denegar', NULL);
+(1, 'permitir', 'permit host ()'),
+(2, 'denegar', 'deny host ()'),
+(3, 'desactivar', 'shutdown'),
+(4, 'salir', 'exit'),
+(5, 'mostrar', 'show'),
+(6, 'crear', 'access-list [] [ | ] [] []'),
+(7, 'pingear', 'ping []'),
+(8, 'saludar', 'ping []'),
+(9, 'notificar', 'ping []'),
+(10, 'mostrar', 'traceroute []'),
+(11, 'depurar', 'debug []'),
+(12, 'limpiar', 'clear'),
+(13, 'activar', 'no shutdown'),
+(14, 'rastrear', 'debug'),
+(15, 'habilitar', 'login; ip domain-lookup; snmp-server enable traps []; switchport port-security');
 
 --
 -- Índices para tablas volcadas
