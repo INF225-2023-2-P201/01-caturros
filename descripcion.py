@@ -9,6 +9,7 @@ text = ("queiero A habilitar B")
 doc = nlp(text)
 verbo = [token.lemma_ for token in doc if token.pos_ == "VERB"][0]
 
+#consulta a la base de datos por el verbo
 resultado = traduccion(verbo)
 partes = resultado.split(";")
 
