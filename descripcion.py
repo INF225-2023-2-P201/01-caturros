@@ -1,29 +1,15 @@
-import nltk
+from bdd.bdd import traduccion
+import spacy
 
-intencion = nltk.word_tokenize("El nodo A quiere conectarse con el nodo B")
+nlp = spacy.load("es_core_news_sm")
 
-descripcion = nltk.pos_tag(intencion)
+text = ("A habilitar B")
 
-instrucciones = {}
+doc = nlp(text)
+verbo = [token.lemma_ for token in doc if token.pos_ == "VERB"][0]
 
-for palabra, tag in descripcion:
-    if tag.startswith('VB'):  # Verbo
-        if "Accion" in instrucciones:
-            instrucciones["Accion"].append(palabra)
-        else:
-            instrucciones["Accion"] = [palabra]
+resultado = traduccion(verbo)
+partes = resultado.split(";")
 
-    elif tag.startswith('NN'):  # Sustantivo
-        if "Objeto" in instrucciones:
-            instrucciones["Objeto"].append(palabra)
-        else:
-            instrucciones["Objeto"] = [palabra]
-
-    elif tag.startswith('JJ'):  # Adjetivo
-        if "Adjetivo" in instrucciones:
-            instrucciones["Adjetivo"].append(palabra)
-        else:
-            instrucciones["Adjetivo"] = [palabra]
-
-print(descripcion)
-print(instrucciones)
+for parte in partes:
+    print(parte)
