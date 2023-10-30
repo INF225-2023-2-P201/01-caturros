@@ -31,3 +31,18 @@ python3 bdd/bdd.py
 pip install spacy
 python3 -m spacy download es_core_news_sm
 Para la base de datos, se debe configurar en local con Xampp.
+
+## Instrucciones Cisco Packet Tracer
+Previamente a los siguientes pasos los pings no estarán habilitados
+Habilitar enrutamiento en Firewall mediante siguientes comandos
+enable
+cisco123! //esta es la password
+configure terminal 
+no policy-map global_policy
+policy-map global_policy
+class inspection_default 
+inspect icmp
+exit
+no service-policy global_policy global
+service-policy global_policy global
+De esta forma podremos realizar ping desde los PCs de la red inside a la red outside 
