@@ -37,6 +37,8 @@ Previamente a los siguientes pasos los pings no estarán habilitados
 
 Habilitar enrutamiento en Firewall mediante siguientes comandos
 
+Estos comandos deben ser ejecutados desde la CLI del Firewall con nombre ASA0
+
 enable
 
 cisco123! //esta es la password
