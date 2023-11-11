@@ -35,7 +35,7 @@ Para la base de datos, se debe configurar en local con Xampp.
 ## Instrucciones Cisco Packet Tracer
 Previamente a los siguientes pasos los pings no estarán habilitados
 
-Habilitar enrutamiento en Firewall mediante siguientes comandos
+### Habilitar enrutamiento en Firewall mediante siguientes comandos
 
 Estos comandos deben ser ejecutados desde la CLI del Firewall con nombre ASA0
 
@@ -60,3 +60,47 @@ no service-policy global_policy global
 service-policy global_policy global
 
 De esta forma podremos realizar ping desde los PCs de la red inside a la red outside 
+
+### Enrutamiento entre nodos
+
+Estos comandos deben ser ejecutados en el router que deseamos configurar
+
+enable
+
+configure terminal
+
+interface fa0/0 *(se indica el puerto a configurar, fa si es fastethernet, gigabit si es gigabitethernet y indicamos el numero del puerto, puede ser 0/0 1/0 0/1, depende del puerto conectado)*
+
+ip address 192.168.10.1 255.255.255.0 
+
+*(Los parametros a ingresar son la ip que asignaremos.* 
+
+*Y posteriormente su máscara de red. En este caso creamos 3 redes diferentes ya que teniamos 3 zonas estas se diferenciaban mediante el tercer octeto. Ejemplo: 10,20,30.*
+
+*El cuarto octeto identifica cada objeto de red.* 
+
+*El 1 siempre es utilizado para la puerta de enlace o el puertodesde donde nace la red. La máscara de red debe ser acorde a la ip que estemos asignando)*
+
+no shutdown *(activamos la interfaz configurada)*
+
+exit 
+
+end
+
+write *(con este comando guardamos los cambios realizados)*
+
+De esta forma se configura el enrutamiento y la conexión desde el router
+
+Posteriormente se debe asignar la ip a cada pc que tengamos 
+
+Ingresando a Desktop y IP Configuration mediante su interfaz
+
+Ingresamos IPv4 Address
+
+En este caso como la red fue 192.168.10.1, este objeto de red tendrá ip 192.168.10.2 con máscara 255.255.255.0
+
+Y finalmente asignamos el Default Gateway o Puerta de Enlace como 192.168.10.1
+
+Esto aplicado a los diferentes objetos de red y siendo rigurosos asignando el último octeto dependiendo del objeto de red. Se genera el enrutamiento para esta red. 
+
+
