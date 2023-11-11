@@ -20,13 +20,13 @@ img{
 }
 
 .header{
-    background-color: #B0FEA5;
+    background-color: #137049;
     padding: 35px 0 40px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid #368425;
+    border-bottom: 2px solid #B0FEA5;
 }
 
 .menu{
