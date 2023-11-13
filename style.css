@@ -79,3 +79,8 @@ img{
 .header-txt p{
     font-size: xx-large;
 }
+
+.video {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
