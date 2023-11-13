@@ -31,6 +31,8 @@ pip install mysql-connector
 python3 bdd/bdd.py  
 pip install spacy
 python3 -m spacy download es_core_news_sm
+pip install networkx
+pip install matplotlib
 Para la base de datos, se debe configurar en local con Xampp.
 
 ## Instrucciones Cisco Packet Tracer
