@@ -23,6 +23,7 @@ A continuación está el enlace a las [historias de usuario del proyecto](https:
 A continuación se encuentran los videos utilizados para evidenciar el avance en los sprints.
 * [sprint 1](https://www.youtube.com/watch?v=nVbRdrlfwEM)
 * [sprint 3](https://www.youtube.com/watch?v=Mr7GJP_TreA)
+* [Demostración página web](https://www.youtube.com/watch?v=NXTS4NMlJdc&embeds_referring_euri=http%3A%2F%2Flocalhost%2F&source_ve_path=Mjg2NjY&feature=emb_logo)
 
 ## Ejecución de código
 Instalar esto antes de la ejecucion del archivo de python  
@@ -103,4 +104,9 @@ Y finalmente asignamos el Default Gateway o Puerta de Enlace como 192.168.10.1
 
 Esto aplicado a los diferentes objetos de red y siendo rigurosos asignando el último octeto dependiendo del objeto de red. Se genera el enrutamiento para esta red. 
 
+## Instrucciones Página Web
+Nuestra página fue creada usando la aplicación Xampp, por lo tanto, para visualizarla se deberán mover todos los archivos del directorio github/01-Caturros a C:\xampp\htdocs.
 
+Luego de esto, hay que activar Apache y MySQL en Xampp.
+
+Ahora, en el navegador se debe buscar localhost/nombrecarpetanueva/index.php para poder acceder a la página. En ella encontrarás un espacio para ingresar tu intención y un video explicativo de como funciona nuestra página.
