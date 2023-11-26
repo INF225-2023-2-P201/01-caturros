@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `ad`
 --
 
-CREATE TABLE `ad` (
+CREATE TABLE `admin` (
   `usuario` varchar(255) NOT NULL,
   `clave` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -36,7 +36,7 @@ CREATE TABLE `ad` (
 -- Volcado de datos para la tabla `ad`
 --
 
-INSERT INTO `ad` (`usuario`, `clave`) VALUES
+INSERT INTO `admin` (`usuario`, `clave`) VALUES
 ('Dante', '?+}?ۮ??pٌ?'),
 ('Alvaro', 'ᬦW??? ??cT??'),
 ('Diego', '??Ⱦ?=4Ei?e???'),
