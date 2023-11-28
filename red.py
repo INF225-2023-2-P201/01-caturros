@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 def create_network():
     G = nx.Graph()
 
-    devices = ["PC1", "PC2", "PC3", "Router", "Firewall"]
+    devices = ["PC1", "PC2", "Router", "Firewall"]
     G.add_nodes_from(devices)
 
     # Conectar dispositivos
-    G.add_edges_from([("PC1", "Router"), ("PC2", "Router"), ("PC3", "Router"), ("Router", "Firewall")])
+    G.add_edges_from([("PC1", "Router"), ("PC2", "Router"), ("Router", "Firewall")])
 
     # Se asocia el atributo service a cada dispositivo para ver disponibilidad
     nx.set_node_attributes(G, {device: False for device in devices}, "service")
@@ -46,12 +46,29 @@ def desactivate_service(graph, device):
     else:
         print(f"{device} no es un dispositivo válido en la red.")
 
+def route_nodes(graph, node1, node2):
+    if node1 in graph.nodes and node2 in graph.nodes:
+        if not graph.has_edge(node1, node2):
+            graph.add_edges_from([(node1, node2)])
+            print(f"Conexión creada entre {node1} y {node2}.")
+        else:
+            print(f"Ya existe una conexión entre {node1} y {node2}.")
+    else:
+        print(f"Uno o ambos nodos no son válidos en el grafo.")
+
+def remove_nodes(graph, node1, node2):
+    if node1 in graph.nodes and node2 in graph.nodes:
+        if graph.has_edge(node1, node2):
+            graph.remove_edge(node1, node2)
+            print(f"Conexión entre {node1} y {node2} eliminada.")
+        else:
+            print(f"No existe una conexión entre {node1} y {node2}.")
+    else:
+        print(f"Uno o ambos nodos no son válidos en el grafo.")
+
 def main():
     # Crear la red
     network = create_network()
-
-    # Visualizar la red (opcional)
-    visualize_network(network)
 
     # Hacer ping entre dispositivos específicos
     ping_device(network, "PC1", "Router")
@@ -62,6 +79,12 @@ def main():
     ping_device(network, "PC1", "Router")
     desactivate_service(network, "PC1")
     ping_device(network, "PC1", "Router")
+
+    route_nodes(network, "PC1", "PC2")
+    
+    remove_nodes(network, "PC2", "Router")
+
+    visualize_network(network)
 
 if __name__ == "__main__":
     main()
