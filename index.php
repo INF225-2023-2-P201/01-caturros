@@ -12,6 +12,22 @@
           display: flex;
           margin-right: 1300px;
         }
+        .logo {
+          display: flex;
+          align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            height: auto;
+        }
+        .header {
+            background-color: #137049;
+            padding: 10px; /* Ajusta el relleno del header según tus necesidades */
+            display: flex;
+            justify-content: space-between; /* Espacia los elementos alrededor del header */
+            align-items: center; /* Centra verticalmente los elementos en el header */
+            border-bottom: 2px solid #B0FEA5;
+        }
         .container{
           text-align: center;
           justify-content: center;
@@ -46,13 +62,11 @@
 </head>
 <body>
   <header class="header">
-        <a href="#" class="logo"></a>
-        <div class="menu container">
-            <input type="checkbox" id="menu"/>
-            <label for="menu">
-                <img src="images/Santiago_Wanderers1.png" class="menu-ico" alt="menu">
-            </label>
-        </div>
+      <div class="logo">
+          <img src="images\Santiago_Wanderers1.png" alt="Logo">
+          <span class="registros-link"><a href="registros.php">CATURROS</a></span>
+          <span class="registros-link"><a href="registros.php">Registros</a></span>
+      </div>
   </header>
 
 
