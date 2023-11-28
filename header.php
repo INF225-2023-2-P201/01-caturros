@@ -1,3 +1,18 @@
+<?php
+include("bdd/bd.php");
+session_start();       
+if (isset($_SESSION['id'])) {     
+    $records = $conexion->prepare('SELECT id, usuario, clave FROM administradores WHERE id = :id');     
+    $records->bindParam(':id', $_SESSION['id']);     
+    $records->execute();     
+    $results = $records->fetch(PDO::FETCH_ASSOC);      
+    $user = null;      
+    if (count($results) > 0) {      
+         $user = $results;    
+          }   
+} 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -61,10 +76,21 @@
     </style>
 </head>
 <body>
-  <header class="header">
-      <div class="logo">
-          <img src="images\Santiago_Wanderers1.png" alt="Logo">
-          <span class="registros-link"><a href="index.php">CATURROS</a></span>
-          <span class="registros-link"><a href="registros.php">Registros</a></span>
-      </div>
-  </header>
+<header class="header">
+    <div class="logo">
+        <img src="images\Santiago_Wanderers1.png" alt="Logo">
+        <span class="registros-link"><a href="index.php">CATURROS</a></span>
+        <?php if (!empty($user)): ?>
+            <span class="registros-link"><a href="registros.php">Registros</a></span>
+        <?php endif ?>
+    </div>
+    <div class="header-left">
+  <?php if (!empty($user)): ?>
+    <span class="sesion-link">
+    <span class="sesion-link"><a style="color: #B0FEA5; font-size: 25px; font-weight: bold;"><?php echo utf8_decode($results['usuario'])?>&nbsp;</a></span>
+    <span class="sesion-link"><a href="CerrarSesion.php">CERRAR SESIÓN</a></span>
+  <?php else: ?>
+    <span class="sesion-link"><a href="sesion.php">INICIAR SESIÓN</a></span>
+    <?php endif ?>
+</div>
+</header>
