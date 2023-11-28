@@ -87,7 +87,7 @@ if (isset($_SESSION['id'])) {
     <div class="header-left">
   <?php if (!empty($user)): ?>
     <span class="sesion-link">
-    <span class="sesion-link"><a style="color: #B0FEA5; font-size: 25px; font-weight: bold;"><?php echo utf8_decode($results['usuario'])?>&nbsp;</a></span>
+    <span class="sesion-link"><a style="color: #B0FEA5; font-size: 25px; font-weight: bold;"><?php echo strtoupper(utf8_decode($results['usuario']))?>&nbsp;</a></span>
     <span class="sesion-link"><a href="CerrarSesion.php">CERRAR SESIÓN</a></span>
   <?php else: ?>
     <span class="sesion-link"><a href="sesion.php">INICIAR SESIÓN</a></span>
