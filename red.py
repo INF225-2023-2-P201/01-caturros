@@ -1,5 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import mysql.connector
+import io
 
 def create_network():
     G = nx.Graph()
@@ -18,7 +20,19 @@ def create_network():
 def visualize_network(graph):
     pos = nx.spring_layout(graph)
     nx.draw(graph, pos, with_labels=True, font_weight='bold', node_size=700, node_color="skyblue")
-    plt.savefig("network_graph.png")
+    image_buffer = io.BytesIO()
+    plt.savefig(image_buffer, format="png")
+    image_binary = image_buffer.getvalue()
+    
+    conexion=mysql.connector.connect(host="localhost", user="root", passwd="", database="caturros")
+    cursor = conexion.cursor()
+    consulta = "INSERT INTO fotos (imagen) VALUES (%s)"
+    datos = (image_binary)
+    cursor.execute(consulta, datos)
+
+    conexion.commit()
+    cursor.close()
+    conexion.close()
 
 def ping_device(graph, source_device, target_device):
     if source_device in graph.nodes and target_device in graph.nodes:
@@ -66,13 +80,13 @@ def remove_nodes(graph, node1, node2):
     else:
         print(f"Uno o ambos nodos no son válidos en el grafo.")
 
-def main():
+def main(text):
     # Crear la red
     network = create_network()
 
-    # Hacer ping entre dispositivos específicos
-    ping_device(network, "PC1", "Router")
-    ping_device(network, "PC2", "Firewall")
+    if text == "ping":
+        ping_device(network, "PC1", "Router")
+        ping_device(network, "PC2", "Firewall")
 
     # Activar y desactivar servicios
     activate_service(network, "PC1")
