@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2023 a las 00:39:13
+-- Tiempo de generación: 28-11-2023 a las 20:50:40
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -24,24 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ad`
+-- Estructura de tabla para la tabla `administradores`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `administradores` (
+  `id` int(255) NOT NULL,
   `usuario` varchar(255) NOT NULL,
-  `clave` varchar(255) NOT NULL
+  `clave` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `ad`
+-- Volcado de datos para la tabla `administradores`
 --
 
-INSERT INTO `admin` (`usuario`, `clave`) VALUES
-('Dante', '?+}?ۮ??pٌ?'),
-('Alvaro', 'ᬦW??? ??cT??'),
-('Diego', '??Ⱦ?=4Ei?e???'),
-('Gonzalo', '??fm?96\Z\"??F[Xp?'),
-('Vicentes', '????B?V^ 5ZPKf');
+INSERT INTO `administradores` (`id`, `usuario`, `clave`) VALUES
+(1, 'Alvaro', 'hola123'),
+(2, 'root', '$2y$10$s/2CKCtlg4vMm/W66OJa5OAEZVoVnZYLFYHCpActYY7XgxgQYorsG');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
