@@ -50,6 +50,24 @@ img{
     display: none;
 }
 
+.titulo-link a {
+    font-family: 'Poppins', sans-serif;
+    color: #FFD700;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.registros-link a {
+    font-family: 'Poppins', sans-serif;
+    color: #B0FEA5;
+    font-size: 35px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+
 .menu-ico {
     width: 150px;
 }
