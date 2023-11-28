@@ -19,14 +19,22 @@ img{
     margin: 0 auto;
 }
 
-.header{
+.header {
     background-color: #137049;
     padding: 35px 0 40px 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between; /* Cambiado de space-around a space-between */
     align-items: center;
     border-bottom: 2px solid #B0FEA5;
+}
+
+.header-left {
+    background-color: #137049;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: right;
 }
 
 .menu{
@@ -62,11 +70,21 @@ img{
 .registros-link a {
     font-family: 'Poppins', sans-serif;
     color: #B0FEA5;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     margin-right: 30px;
 }
 
+.sesion-link {
+    margin-left: auto;
+}
+
+.sesion-link a {
+    font-family: 'Poppins', sans-serif;
+    color: #B0FEA5;
+    font-size: 25px;
+    font-weight: bold;
+}
 
 .menu-ico {
     width: 150px;
