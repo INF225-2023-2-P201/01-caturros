@@ -2,17 +2,14 @@
 <?php include 'header.php'; ?>
 
   <div class="container">
-      <label for="entrada" class="entrada-label">Entrada:</label>
-      <input type="text" id="entrada" name="entrada" class="entrada-input" placeholder="Introduce un valor">
-
-      <br>
-
-      <label for="salida" class="salida-label">Salida:</label>
-      <output id="salida" name="salida" class="salida-output"></output>
-      
-      <br>
-
-      <button onclick="calcularResultado()" class="calcular-button">Calcular</button>
+    <div class="input-group">
+        <label for="entrada" class="entrada-label">Entrada:</label>
+        <input type="text" id="entrada" name="entrada" class="entrada-input" placeholder="Ingresa una intención">
+        <button onclick="calcularResultado()" class="calcular-button">Calcular</button>
+    </div>
+    <br>
+    <label for="salida" class="salida-label">Salida:</label>
+    <output id="salida" name="salida" class="salida-output"></output>
       
   </div>
       <script>

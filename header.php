@@ -37,41 +37,59 @@ if (isset($_SESSION['id'])) {
         }
         .header {
             background-color: #137049;
-            padding: 10px; /* Ajusta el relleno del header según tus necesidades */
+            padding: 10px;
             display: flex;
-            justify-content: space-between; /* Espacia los elementos alrededor del header */
-            align-items: center; /* Centra verticalmente los elementos en el header */
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 2px solid #B0FEA5;
         }
         .container{
-          text-align: center;
-          justify-content: center;
-          align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* Establece la dirección de los elementos como columna */
+            align-items: center; /* Centra los elementos horizontalmente */
         }
-        .entrada-label {
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .entrada-label,
+        .salida-label {
+          margin-top: 5px;
+          font-family: 'Helvetica';
           font-weight: bold;
-          margin-top: 10px;
+          font-size: 19px;
         }
         .entrada-input {
-          width: 250px;
-          margin-left: 10px;
-          margin-top: 50px;
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #006400; /* Borde gris */
+            border-radius: 5px; /* Esquinas redondeadas */
+            font-size: 16px; /* Tamaño del texto */
+            box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
         }
-        .salida-label {
-          font-weight: bold;
-          margin-top: 10px;
+        .entrada-input:focus {
+            outline: none; /* Elimina el contorno predeterminado al hacer clic en la caja de texto */
+            border: 3px solid #4CAF50; /* Cambia el borde al hacer clic en la caja de texto */
         }
         .salida-output {
           color: black;
           margin-top: 100px;
         }
         .calcular-button {
-          background-color: #006400;
-          color: white;
-          border: none;
-          padding: 20px 150px;
-          cursor: pointer;
-          margin-top: 10px;
+            background-color: #137049;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .calcular-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
