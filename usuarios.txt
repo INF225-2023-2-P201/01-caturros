@@ -1,7 +1,0 @@
-Dante,hola123
-Alvaro,hola123
-Alvaro,chao123
-Ernesto,duro333
-Vicentes,hola123
-Gonzalo,hola123
-Diego,hola123

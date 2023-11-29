@@ -1,4 +1,4 @@
-#!C:\Users\Vicen\AppData\Local\Programs\Python\Python311
+#!C:\Users\Vicen\AppData\Local\Programs\Python\Python311\python.exe
 
 import cgi
 from bdd.bdd import traduccion, insertar
