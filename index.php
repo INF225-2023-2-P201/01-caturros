@@ -17,22 +17,15 @@
             var valorEntrada = document.getElementById("entrada").value;
 
             fetch('descripcion.py?text=' + encodeURIComponent(valorEntrada))
-                .then(response => response.text())
+                .then(response => response.json())
                 .then(data => {
                     console.log('Respuesta del servidor:', data);
+                    
+                    var resultado = data.Resultado;
+
+                    document.getElementById("salida").textContent = resultado;
                 })
                 .catch(error => console.error('Error:', error));
-            
-            
-                //.then(response => response.text())
-                //.then(data => {
-                //  console.log('Respuesta del servidor:', data);
-                //  return JSON.parse(data);
-                //})
-                //.then(parsedData => {
-                //  document.getElementById("salida").textContent = parsedData.partes.join(' ');
-                //})
-                //.catch(error => console.error('Error:', error));
           }
       </script>
   <?php

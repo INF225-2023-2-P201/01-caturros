@@ -38,21 +38,17 @@ CREATE TABLE `intenciones` (
 --
 
 INSERT INTO `intenciones` (`id`, `intencion`, `cisco`) VALUES
-(1, 'permitir', 'permit host ()'),
-(2, 'denegar', 'deny host ()'),
-(3, 'desactivar', 'shutdown'),
-(4, 'salir', 'exit'),
-(5, 'mostrar', 'show'),
-(6, 'crear', 'access-list [] [ | ] [] []'),
+(1, 'prender', 'activar'),
+(2, 'activar', 'activar'),
+(3, 'desactivar', 'desactivar'),
+(4, 'apagar', 'desactivar'),
+(5, 'enrutar', 'enrutar'),
+(6, 'conectar', 'enrutar'),
 (7, 'pingear', 'ping'),
 (8, 'saludar', 'ping'),
 (9, 'notificar', 'ping'),
-(10, 'mostrar', 'traceroute []'),
-(11, 'depurar', 'debug []'),
-(12, 'limpiar', 'clear'),
-(13, 'activar', 'no shutdown'),
-(14, 'rastrear', 'debug'),
-(15, 'habilitar', 'login; ip domain-lookup; snmp-server enable traps []; switchport port-security');
+(10, 'desenrutar', 'desenrutar'),
+(11, 'desconectar', 'desenrutar');
 
 --
 -- Índices para tablas volcadas

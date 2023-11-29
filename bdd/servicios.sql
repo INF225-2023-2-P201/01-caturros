@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2023 a las 20:50:40
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 29-11-2023 a las 03:53:38
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,32 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administradores`
+-- Estructura de tabla para la tabla `servicios`
 --
 
-CREATE TABLE `administradores` (
-  `id` int(255) NOT NULL,
-  `usuario` varchar(255) NOT NULL,
-  `clave` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `servicios` (
+  `id` int(11) NOT NULL,
+  `nodo` varchar(255) NOT NULL,
+  `estado` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `administradores`
+-- Volcado de datos para la tabla `servicios`
 --
 
-INSERT INTO `administradores` (`id`, `usuario`, `clave`) VALUES
-(1, 'Alvaro', 'hola123'),
-(2, 'root', '$2y$10$s/2CKCtlg4vMm/W66OJa5OAEZVoVnZYLFYHCpActYY7XgxgQYorsG'),
-(3, 'admin', 'hola');
+INSERT INTO `servicios` (`id`, `nodo`, `estado`) VALUES
+(1, 'PC1', '1'),
+(2, 'PC2', '1'),
+(3, 'Router', 'False'),
+(4, 'Firewall', 'False');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `administradores`
+-- Indices de la tabla `servicios`
 --
-ALTER TABLE `administradores`
+ALTER TABLE `servicios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +58,10 @@ ALTER TABLE `administradores`
 --
 
 --
--- AUTO_INCREMENT de la tabla `administradores`
+-- AUTO_INCREMENT de la tabla `servicios`
 --
-ALTER TABLE `administradores`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `servicios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

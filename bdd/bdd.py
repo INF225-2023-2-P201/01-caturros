@@ -14,7 +14,7 @@ def insertar(verbo, intencion, traduccion):
     conexion=mysql.connector.connect(host="localhost", user="root", passwd="", database="caturros")
     cursor = conexion.cursor()
     consulta = "INSERT INTO registro (frase, intencion, traduccion) VALUES (%s, %s, %s)"
-    valores = (verbo, intencion, traduccion)
+    valores = (intencion, verbo, traduccion)
     cursor.execute(consulta, valores)
     conexion.commit()
     cursor.close()
