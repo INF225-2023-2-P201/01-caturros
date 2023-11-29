@@ -111,4 +111,6 @@ Nuestra página fue creada usando la aplicación Xampp, por lo tanto, para visua
 
 Luego de esto, hay que activar Apache y MySQL en Xampp.
 
-Ahora, en el navegador se debe buscar localhost/nombrecarpetanueva/index.php para poder acceder a la página. En ella encontrarás un espacio para ingresar tu intención y un video explicativo de como funciona nuestra página.
+Ahora, en el navegador se debe buscar localhost/nombrecarpetanueva/index.php para poder acceder a la página. En ella encontrarás un espacio para iniciar sesión ingresando nombre de usuario(En este caso se utilizaron los nombrese: Vicentes, Alvaro, Dante, Gonzalo y Diego) y contraseña(hola123), para poder ingresar a la página, en esta se encontrarán dos pestañas, CATURROS y REGISTRO, en la primera y principal se podrán ingresar las intenciones de los usuarios de la capa empresarial y en la última se encontrará un registro de las intenciones ingresadas.
+
+Además se desarrollaron dos bases de datos nuevas, la de REGISTROS, que guardará las intenciones ingresadas en conjunto con su descomposición y ADMINISTRADORES, que guardará la información de inicio de sesión de cada administrador.

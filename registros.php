@@ -31,7 +31,7 @@
 
 <?php
 // Realizar la consulta para obtener los registros
-$query = "SELECT id, frase, intencion, traduccion FROM registro LIMIT 5";
+$query = "SELECT id, frase, intencion, traduccion FROM registro";
 $result = $conexion->query($query);
 
 // Verificar si hay resultados
