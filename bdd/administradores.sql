@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2023 a las 20:50:40
+-- Tiempo de generación: 29-11-2023 a las 03:27:22
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -39,7 +39,10 @@ CREATE TABLE `administradores` (
 
 INSERT INTO `administradores` (`id`, `usuario`, `clave`) VALUES
 (1, 'Alvaro', 'hola123'),
-(2, 'root', '$2y$10$s/2CKCtlg4vMm/W66OJa5OAEZVoVnZYLFYHCpActYY7XgxgQYorsG');
+(3, 'Diego', 'hola123'),
+(4, 'Dante', 'hola123'),
+(5, 'Gonzalo', 'hola123'),
+(6, 'Vicentes', 'hola123');
 
 --
 -- Índices para tablas volcadas
@@ -59,7 +62,7 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de la tabla `administradores`
 --
 ALTER TABLE `administradores`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

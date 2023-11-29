@@ -13,7 +13,7 @@ if (!empty($_POST['usuario']) && !empty($_POST['clave'])) {
         echo '<script>alert("Inicio de sesión exitoso"); window.location="index.php";</script>';
         exit();
     } else {
-        $error = "Usuario o contraseña incorrectos. Usuario: " . $_POST['usuario'] . ", Hash esperado: " . $resultado['clave'];
+        $error = "Usuario o contraseña incorrectos";
         header('Location: sesion.php?error=' . urlencode($error));
         exit();
     }
