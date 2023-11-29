@@ -27,13 +27,20 @@ A continuación se encuentran los videos utilizados para evidenciar el avance en
 
 ## Ejecución de código
 Instalar esto antes de la ejecucion del archivo de python  
-pip install mysql-connector  
-python3 bdd/bdd.py  
+pip install mysql-connector   
 pip install spacy
 python3 -m spacy download es_core_news_sm  
 pip install networkx  
 pip install matplotlib  
-Para la base de datos, se debe configurar en local con Xampp.
+En la primera línea del [descripcion.py](https://github.com/INF225-2023-2-P201/01-caturros/blob/main/descripcion.py) se tiene que poner la ubicación de su intérprete de Python y antes los caracteres #!.  
+Si se está ejecutando en Windows asegurarse de tener en el PATH el archivo del interprete de Python, acá hay un [vídeo](https://www.youtube.com/watch?v=B08TNPt7a-M&ab_channel=Pilodev) que resuelve el tema.  
+En la carpeta xampp\apache\conf\extra editar el archivo http-xampp.conf y introducir después de las líneas <Directory>, el siguiente extracto:
+<Directory "C:/xampp/htdocs/01-caturros">
+    Options +ExecCGI
+    AddHandler cgi-script .py
+</Directory>  
+Al ingresar entradas en el index.php ir revisando la Consola de la página, si tira errores repetir el proceso anterior pero en la carpeta xampp\apache\conf y en el archivo httpd.conf.  
+Si sigue obteniendo errores, ir revisando en la carpeta xampp\apache\logs el archivo error.log los errores que aparezcan, si lo anterior está bien solo deberían aparecer problemas de instalar librerías.
 
 ## Instrucciones Cisco Packet Tracer
 Previamente a los siguientes pasos los pings no estarán habilitados
