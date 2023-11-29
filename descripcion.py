@@ -1,4 +1,4 @@
-#!C:\Users\Vicho\AppData\Local\Programs\Python\Python310\python.exe
+#!C:\Users\Vicen\AppData\Local\Programs\Python\Python311
 
 import json
 import cgi

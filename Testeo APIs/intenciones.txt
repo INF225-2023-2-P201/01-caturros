@@ -1,0 +1,14 @@
+PC2 saludar PC1
+PC1 pingear PC2
+PC1 notificar PC2
+permitir PC2
+denegar PC1
+desactivar PC2
+salir 
+mostrar la red
+crear PC3
+depurar la red
+limpiar la red
+activar PC2 
+rastrear PC2 
+habilitar PC3
