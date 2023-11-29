@@ -40,7 +40,10 @@ CREATE TABLE `administradores` (
 INSERT INTO `administradores` (`id`, `usuario`, `clave`) VALUES
 (1, 'Alvaro', 'hola123'),
 (2, 'root', '$2y$10$s/2CKCtlg4vMm/W66OJa5OAEZVoVnZYLFYHCpActYY7XgxgQYorsG'),
-(3, 'admin', 'hola');
+(3, 'Diego', 'hola123'),
+(4, 'Dante', 'hola123'),
+(5, 'Gonzalo', 'hola123'),
+(6, 'Vicentes', 'hola123');
 
 --
 -- Índices para tablas volcadas
