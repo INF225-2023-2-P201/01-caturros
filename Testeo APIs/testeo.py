@@ -1,4 +1,4 @@
-from bdd import traduccion, insertar
+from bdd.bdd import traduccion, insertar
 import spacy
 
 nlp = spacy.load("es_core_news_sm")
