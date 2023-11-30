@@ -9,7 +9,6 @@ with open('usuarios.txt', 'r') as archivo:
         resultado = cursor1.fetchone()
         clave = clave.replace('\n', '')
         if resultado:
-            print(resultado[0] )
             if resultado[0] == clave:
                 print("El usuario " + nombre + " existe y la clave es correcta")
             else:
